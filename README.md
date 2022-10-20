@@ -1,2 +1,2 @@
 # service
-Http service wrapper
+GO http service wrapper
