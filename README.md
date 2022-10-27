@@ -1,2 +1,2 @@
 # service
-GO Echo based http service starter
+Echo based http service starter
