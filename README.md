@@ -1,2 +1,2 @@
 # service
-GO http service wrapper
+GO Echo based http service starter
