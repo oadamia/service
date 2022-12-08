@@ -3,6 +3,7 @@ package service
 import (
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
+	"github.com/oadamia/jwt"
 	"github.com/oadamia/logwrapper"
 	"github.com/oadamia/service/validator"
 )
@@ -21,7 +22,7 @@ func New(secret string) (e *echo.Echo) {
 // UseJWTMidddleware set JWT middleware for group
 func UseJWTMidddleware(g *echo.Group) {
 	jwtConfig := middleware.JWTConfig{
-		// Claims:     &jwt.UserClaim{},
+		Claims:     &jwt.CustomClaim{},
 		SigningKey: []byte(authSecret),
 	}
 	g.Use(middleware.JWTWithConfig(jwtConfig))
